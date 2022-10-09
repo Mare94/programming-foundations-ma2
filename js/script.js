@@ -19,26 +19,55 @@ var pets = [
 
 for(i = 0; i < pets.length; i++){
     var petAge = pets[i].age;
-    //var petType = pets[i].type;
+    var petType = pets[i].type;
     
+    //var petAnimal = pets[i].age + "" + pets[i].type;
+
     if(petAge>= 4){
         console.log(petAge);
+        console.log(petType)
     }
 };
 
+//or
+
+/*for(i = 0; i < pets.length; i++){
+    var pet = pets[i];
+
+    console.log(pet.type)
+    console.log(pet.age)
+} if(pet.age >=4){
+    console.log(pet.type)
+    console.log(pet.age)
+}*/
+
 // Question 2
-function logWord(logWord) {
+function logWord() {
     var selfMade = true;
     //var notSelfMade = false;
-    if (selfMade !== true){
+    if (selfMade === true){
         console.log("true");
-    } else {
+    } else{
         console.log("Please pass a boolean value in");
     }
     
 }
 
-logWord()
+logWord();
+
+// or
+
+
+function first() {
+    if (first.caller === null){
+        return "Please pass a boolean";
+    } else{
+        return 'true ${first.caller}';
+    }
+}
+
+
+first(true);
 
 // Question 3, change color of h2 element to blue, and change it to read "Updated subheading"
 
